@@ -21,10 +21,13 @@ type InputValueOrOperation = {
 type Manipulateinput = {
     type : "CLEAR_INPUTS" | "DELETE_INPUTS" | "CLEAR" | "EVALUATE"
 }
-const calculate = ({value1,value2,operation}:{value1:string,value2:string,operation:string}) : number=>{
+const calculate = ({value1,value2,operation}:{value1:string,value2:string,operation:string}) : number | string=>{
+    if(value2.includes("∞")){
+        value2 = "Infinity";
+    }
     let val1 = Number(value1);
     let val2 = Number(value2);
-    let result:number = 0
+    let result:number | string = 0
     if(operation === '+'){
         result = val2 + val1;
     } else if(operation === '-'){
@@ -33,6 +36,9 @@ const calculate = ({value1,value2,operation}:{value1:string,value2:string,operat
         result = val2 * val1;
     }else  if(operation === '/'){
         result = val2 / val1;
+    }
+    if (result.toString() === "Infinity"){
+        result = "∞"
     }
     return result;
 }
@@ -94,6 +100,9 @@ export const reducer = (state: InitialStateProp,action: InputValueOrOperation | 
     //Percent input
     if(action.type === 'PERCENT'){
         if(action.payload === '%'){ 
+            if(state.currentValue.includes('∞')){
+                return {...state}
+            }
             if(state.currentValue.includes('=')){
                 const current = state.currentValue;
                 const newNum = (Number(current.slice(1)) / 100).toString();
@@ -114,7 +123,7 @@ export const reducer = (state: InitialStateProp,action: InputValueOrOperation | 
             const result = calculate({value1:state.currentValue,value2:state.previousValue,operation:state.operation});
             localStorage.setItem("history",JSON.stringify([...state.history,[...state.getHistory,state.currentValue,`= ${result}`]]))
             return  {...state, previousValue:'',operation:'',currentValue:`= ${result}`,newValue:true,getHistory:[],history:[...state.history,[...state.getHistory,state.currentValue,`= ${result}`]]}
-        }
+        }else return state
     }
     //Clear history
     if(action.type === 'CLEAR'){

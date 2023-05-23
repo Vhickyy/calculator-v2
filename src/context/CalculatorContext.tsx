@@ -32,10 +32,6 @@ export const CalculatorProvider = ({children}:ContextChildren)=>{
         // console.log(state.history);
         dispatch({type:'EVALUATE'});
         // localStorage.setItem("history",JSON.stringify(state.history))
-        console.log(state.history);
-        console.log(state.previousValue);
-        
-        // console.log(state.getHistory);
         
     }
     const percent = (value: string)=>{
