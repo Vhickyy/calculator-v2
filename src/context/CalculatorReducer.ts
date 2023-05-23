@@ -4,7 +4,7 @@ export const initialState = {
     operation:'',
     newValue:true,
     getHistory:[],
-    history:[]
+    history: JSON.parse(`${localStorage.getItem('history')}`) || []
 }
 export type InitialStateProp = {
     currentValue: string
@@ -67,7 +67,7 @@ export const reducer = (state: InitialStateProp,action: InputValueOrOperation | 
         if(state.currentValue && state.previousValue){
             const result = calculate({value1:state.currentValue,value2:state.previousValue,operation:state.operation})
             if(result.toString().includes('NaN')){
-                return {...state,previousValue:'',currentValue:`${result}`,getHistory:[],operation:'',newValue:true,history:[...state.history,[...state.getHistory,state.currentValue,`=${result}`]]};
+                return {...state,previousValue:'',currentValue:`${result}`,getHistory:[],operation:'',newValue:true,history:[...state.history,[...state.getHistory,state.currentValue,`= ${result}`]]};
             }
             return {...state,previousValue:result.toString(),operation:action.payload,newValue:true,currentValue:'',getHistory:[...state.getHistory,state.currentValue,action.payload]}
         }
@@ -97,22 +97,23 @@ export const reducer = (state: InitialStateProp,action: InputValueOrOperation | 
             if(state.currentValue.includes('=')){
                 const current = state.currentValue;
                 const newNum = (Number(current.slice(1)) / 100).toString();
-                return {...state,currentValue:`=${newNum}`,history:[...state.history,[current.slice(1),'%',`= ${newNum}`]]}
+                return {...state,currentValue:`= ${newNum}`,history:[...state.history,[current.slice(1),'%',`= ${newNum}`]]}
             }
             if(!state.previousValue && state.currentValue !== ""){
-                const newNum = parseInt(state.currentValue) / 100;
-                return {...state,currentValue:`=${newNum}`,newValue:true,history:[...state.history,[state.currentValue, '%',`= ${newNum}`]]}
+                const newNum = Number(state.currentValue) / 100;
+                return {...state,currentValue:`= ${newNum}`,newValue:true,history:[...state.history,[state.currentValue, '%',`= ${newNum}`]]}
             }
             if(state.currentValue){
-                const newNum = parseInt(state.currentValue) / 100;
+                const newNum = Number(state.currentValue) / 100;
             return {...state,currentValue:newNum.toString(),newValue:true}
             }
         }  
     }
     if(action.type === 'EVALUATE'){
         if(state.currentValue && state.previousValue){
-            const result = calculate({value1:state.currentValue,value2:state.previousValue,operation:state.operation})
-            return  {...state, previousValue:'',operation:'',currentValue:`=${result}`,newValue:true,getHistory:[],history:[...state.history,[...state.getHistory,state.currentValue,`=${result}`]]}
+            const result = calculate({value1:state.currentValue,value2:state.previousValue,operation:state.operation});
+            localStorage.setItem("history",JSON.stringify([...state.history,[...state.getHistory,state.currentValue,`= ${result}`]]))
+            return  {...state, previousValue:'',operation:'',currentValue:`= ${result}`,newValue:true,getHistory:[],history:[...state.history,[...state.getHistory,state.currentValue,`= ${result}`]]}
         }
     }
     //Clear history
