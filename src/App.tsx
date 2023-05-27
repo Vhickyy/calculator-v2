@@ -8,9 +8,9 @@ function App() {
       {/* <div className='calculator-body'> */}
         <Calculator/>
       {/* </div> */}
-      <div className='history-body'>
+      {/* <div className='history-body'> */}
         <History/>
-      </div>
+      {/* </div> */}
     </Wrapper>
   );
 }
@@ -18,16 +18,12 @@ function App() {
 export default App;
 
 const Wrapper = styled.main`
+  min-height: 100vh;
   background-color: #dde1e7;
   display: grid;
   place-items: center;
   row-gap: 2rem;
   padding-block: 2rem;
-  /* .calculator-body{
-    display: grid;
-    place-items: center;
-    height: 100vh;
-  }  */
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-evenly;

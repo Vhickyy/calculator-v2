@@ -45,6 +45,9 @@ const calculate = ({value1,value2,operation}:{value1:string,value2:string,operat
 export const reducer = (state: InitialStateProp,action: InputValueOrOperation | Manipulateinput)=>{
     //Value Input
     if(action.type === "INPUT_VALUE"){
+        if(state.currentValue.length === 25){
+            return state
+        }
         if(state.newValue && action.payload === '.'){
             return ({...state,currentValue:'0.',newValue:false})
         };

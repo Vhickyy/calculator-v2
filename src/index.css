@@ -62,13 +62,13 @@ button:hover{
 /* .operation:hover{
   box-shadow: inset -3px -3px 7px #62ffff, inset 3px 3px 5px #42adcc;
 } */
-.history-body{
+/* .history-body{
   width: 21rem;
   height: 100vh;
   display: grid;
   place-items: center;
-}
-.history{
+} */
+/* .history{
   width: 21rem;
   background-color: #dde1e7;
   width: 100%;
@@ -81,8 +81,8 @@ button:hover{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.text{
+} */
+/* .text{
   padding: 1rem 1.5rem;
   text-align: end;
   overflow-y: auto;
@@ -100,4 +100,4 @@ button:hover{
   padding: .5rem 2.5rem;
   box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, .288);
   color: rgb(75, 70, 70);
-}
+} */
