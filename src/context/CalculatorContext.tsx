@@ -38,6 +38,8 @@ export const CalculatorProvider = ({children}:ContextChildren)=>{
         dispatch({type:'PERCENT',payload:value})
     }
     const clearLocalStorage = ()=>{
+        console.log("ho");
+        
         dispatch({type:'CLEAR'})
     }
     return (

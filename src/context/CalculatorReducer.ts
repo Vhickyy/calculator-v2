@@ -132,7 +132,8 @@ export const reducer = (state: InitialStateProp,action: InputValueOrOperation | 
     }
     //Clear history
     if(action.type === 'CLEAR'){
-            return {...state,his:[]}
+        localStorage.removeItem("history")
+        return {...state,history:[]}
     }
     return state
 }
