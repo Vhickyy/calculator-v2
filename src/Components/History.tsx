@@ -18,8 +18,8 @@ const History = () => {
           <p>23344=</p>
         </div> */}
       </div>
-      <div className='clear'>
-        <button onClick={clearLocalStorage}>Clear</button>
+      <div className='clear' onClick={clearLocalStorage}>
+        <button >Clear</button>
       </div>
     </Wrapper>
   )
