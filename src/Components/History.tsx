@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { useCalculator } from "../context/CalculatorContext"
 const History = () => {
-  const {history} = useCalculator()
+  const {history, clearLocalStorage} = useCalculator()
   return (
     <Wrapper>
       <div className='text'>
@@ -19,7 +19,7 @@ const History = () => {
         </div> */}
       </div>
       <div className='clear'>
-        <button>Clear</button>
+        <button onClick={clearLocalStorage}>Clear</button>
       </div>
     </Wrapper>
   )
