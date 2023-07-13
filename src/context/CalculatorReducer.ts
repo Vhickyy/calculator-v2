@@ -32,9 +32,9 @@ const calculate = ({value1,value2,operation}:{value1:string,value2:string,operat
         result = val2 + val1;
     } else if(operation === '-'){
         result = val2 - val1;
-    }else  if(operation === '*'){
+    }else  if(operation === '×'){
         result = val2 * val1;
-    }else  if(operation === '/'){
+    }else  if(operation === '÷'){
         result = val2 / val1;
     }
     if (result.toString() === "Infinity"){
@@ -109,15 +109,17 @@ export const reducer = (state: InitialStateProp,action: InputValueOrOperation | 
             if(state.currentValue.includes('=')){
                 const current = state.currentValue;
                 const newNum = (Number(current.slice(1)) / 100).toString();
+                localStorage.setItem("history",JSON.stringify([...state.history,[current.slice(1),'%',`= ${newNum}`]]))
                 return {...state,currentValue:`= ${newNum}`,history:[...state.history,[current.slice(1),'%',`= ${newNum}`]]}
             }
             if(!state.previousValue && state.currentValue !== ""){
                 const newNum = Number(state.currentValue) / 100;
+                localStorage.setItem("history",JSON.stringify([...state.history,[state.currentValue, '%',`= ${newNum}`]]))
                 return {...state,currentValue:`= ${newNum}`,newValue:true,history:[...state.history,[state.currentValue, '%',`= ${newNum}`]]}
             }
             if(state.currentValue){
                 const newNum = Number(state.currentValue) / 100;
-            return {...state,currentValue:newNum.toString(),newValue:true}
+                return {...state,currentValue:newNum.toString(),newValue:true}
             }
         }  
     }

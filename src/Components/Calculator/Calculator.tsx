@@ -19,13 +19,13 @@ const Calculator = () => {
                 <OperationbtnStyle  onClick={clearAll}>AC</OperationbtnStyle>
                 <OperationbtnStyle  onClick={deleteInput}>Del</OperationbtnStyle>
                 <OperationbtnStyle  onClick={(e:any) => percent(e.target.textContent) }>%</OperationbtnStyle>
-                <OperationbtnStyle  onClick={handleOperation}>/</OperationbtnStyle>
+                <OperationbtnStyle  onClick={handleOperation}>÷</OperationbtnStyle>
             </div>
             <div className='grid'>
                 <Button value='7'/>
                 <Button value='8'/>
                 <Button value='9'/>
-                <OperationbtnStyle onClick={handleOperation}>*</OperationbtnStyle>
+                <OperationbtnStyle onClick={handleOperation}>×</OperationbtnStyle>
             </div>
             <div className='grid'>
                 <Button value='4'/>

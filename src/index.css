@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  background-color: #dde1e7;
+}
 /* .calculator-body{
   display: grid;
   place-items: center;

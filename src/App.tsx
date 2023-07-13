@@ -24,6 +24,8 @@ const Wrapper = styled.main`
   place-items: center;
   row-gap: 2rem;
   padding-block: 2rem;
+  width: min(100%,1000px);
+  margin: auto;
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-evenly;

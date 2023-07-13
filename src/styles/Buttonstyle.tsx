@@ -7,6 +7,7 @@ export const Buttonstyle = styled.button`
   font-weight: 700;
   font-size: 1.1rem;
   outline: none;
+  cursor: pointer;
   @media screen and (min-width:400px){
     padding-block: 1.2rem;
   }
