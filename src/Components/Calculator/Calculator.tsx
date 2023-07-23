@@ -72,7 +72,7 @@ const Wrapper = styled.section`
         display: grid;
         align-content: end;
         text-align: end;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: 600;
     }
     .button-section{
