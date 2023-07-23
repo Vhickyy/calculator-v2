@@ -43,4 +43,5 @@ display: flex;
 justify-content: space-between;
 width: min(90%,770px);
 margin-inline: auto;
+padding-block: 1rem 2rem;
 `
