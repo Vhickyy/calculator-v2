@@ -9,7 +9,7 @@ function App() {
       <Header>
         <div>calc</div>
         <div>
-          <a href="#" className='icons'><FaGithub/></a>
+          <a href="#"><FaGithub className='icons'/></a>
         </div>
       </Header>
       <Wrapper>
@@ -43,13 +43,10 @@ display: flex;
 justify-content: space-between;
 width: min(90%,770px);
 margin-inline: auto;
-padding-block: 1rem 2rem;
-/* background-color: green; */
+padding-block: 1rem;
 .icons{
   width: 2rem;
   height: 2rem;
-}
-@media screen and (max-width:400px) {
-  padding-block: 1rem;
+  color: black;
 }
 `
