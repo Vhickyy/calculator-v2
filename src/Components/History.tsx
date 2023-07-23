@@ -65,7 +65,7 @@ const Wrapper = styled.div`
     border: none;
   }
   @media screen and (max-width:400px) {
-      height: 40rem;
+      //height: 40rem;
   }
 `
 
