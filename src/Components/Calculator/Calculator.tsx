@@ -55,7 +55,7 @@ export default Calculator;
 const Wrapper = styled.section`
     background-color: #dde1e7;
     width: 21rem;
-    height: 85vh;
+    height: 34rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

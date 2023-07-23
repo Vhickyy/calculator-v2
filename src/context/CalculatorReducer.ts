@@ -1,47 +1,6 @@
-export const initialState = {
-    currentValue:'',
-    previousValue:'',
-    operation:'',
-    newValue:true,
-    getHistory:[],
-    history: JSON.parse(`${localStorage.getItem('history')}`) || []
-}
-export type InitialStateProp = {
-    currentValue: string
-    previousValue: string
-    operation: string
-    newValue: boolean
-    getHistory: string[]
-    history: string[][]
-}
-type InputValueOrOperation = {
-    type:"INPUT_VALUE" | "INPUT_OPERATION" | "PERCENT"
-    payload:string
-}
-type Manipulateinput = {
-    type : "CLEAR_INPUTS" | "DELETE_INPUTS" | "CLEAR" | "EVALUATE"
-}
-const calculate = ({value1,value2,operation}:{value1:string,value2:string,operation:string}) : number | string=>{
-    if(value2.includes("∞")){
-        value2 = "Infinity";
-    }
-    let val1 = Number(value1);
-    let val2 = Number(value2);
-    let result:number | string = 0
-    if(operation === '+'){
-        result = val2 + val1;
-    } else if(operation === '-'){
-        result = val2 - val1;
-    }else  if(operation === '×'){
-        result = val2 * val1;
-    }else  if(operation === '÷'){
-        result = val2 / val1;
-    }
-    if (result.toString() === "Infinity"){
-        result = "∞"
-    }
-    return result;
-}
+import {InitialStateProp,InputValueOrOperation,Manipulateinput} from "../types"
+import {calculate} from "../utils"
+import { initialState } from "./CalculatorContext";
 export const reducer = (state: InitialStateProp,action: InputValueOrOperation | Manipulateinput)=>{
     //Value Input
     if(action.type === "INPUT_VALUE"){
@@ -84,7 +43,7 @@ export const reducer = (state: InitialStateProp,action: InputValueOrOperation | 
             const newHistory = [...state.getHistory]
             const newarray = newHistory.slice(0,-1)
             const sign = newHistory.slice(-1);
-            sign[0] = action.payload;
+            sign[0]  = action.payload;
             return {...state,operation:action.payload,getHistory:[...newarray,...sign]}
         }
     }

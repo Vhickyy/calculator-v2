@@ -1,5 +1,14 @@
 import {createContext, useContext, useReducer} from 'react'
-import { reducer, initialState,InitialStateProp } from './CalculatorReducer';
+import { reducer } from './CalculatorReducer';
+import { InitialStateProp } from '../types';
+export const initialState = {
+    currentValue:'',
+    previousValue:'',
+    operation:'',
+    newValue:true,
+    getHistory:[],
+    history: JSON.parse(`${localStorage.getItem('history')}`) || []
+}
 const initState = {
     ...initialState as InitialStateProp,
     inputVal: (_value: string) => {},
@@ -29,17 +38,12 @@ export const CalculatorProvider = ({children}:ContextChildren)=>{
         dispatch({type:'DELETE_INPUTS'})
     }
     const evaluate = ()=>{
-        // console.log(state.history);
         dispatch({type:'EVALUATE'});
-        // localStorage.setItem("history",JSON.stringify(state.history))
-        
     }
     const percent = (value: string)=>{
         dispatch({type:'PERCENT',payload:value})
     }
     const clearLocalStorage = ()=>{
-        console.log("ho");
-        
         dispatch({type:'CLEAR'})
     }
     return (

@@ -30,7 +30,8 @@ export default History
 const Wrapper = styled.div`
   background-color: #dde1e7;
   width: 21rem;
-  height: 85vh;
+  /* height: 85vh; */
+  height: 34rem;
   border-radius: 1rem;
   box-shadow: -7px -7px 7px #ffffff70, 7px 7px 5px rgba(94, 104, 121, .2);
   display: flex;
