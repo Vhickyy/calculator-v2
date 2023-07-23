@@ -56,6 +56,7 @@ const Wrapper = styled.section`
     background-color: #dde1e7;
     width: 21rem;
     height: 34rem;
+    /* height: 84vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -95,5 +96,8 @@ const Wrapper = styled.section`
         .last-btn{
             width: 9.1rem;
         }
+    }
+    @media screen and (max-width:400px) {
+        height: 40rem;
     }
 `

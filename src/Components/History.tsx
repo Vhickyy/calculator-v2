@@ -64,6 +64,9 @@ const Wrapper = styled.div`
     color: rgb(75, 70, 70);
     border: none;
   }
+  @media screen and (max-width:400px) {
+      height: 40rem;
+  }
 `
 
 {/* <div className='text'>
