@@ -98,6 +98,6 @@ const Wrapper = styled.section`
         }
     }
     @media screen and (max-width:400px) {
-        height: 36rem;
+        height: 35rem;
     }
 `
