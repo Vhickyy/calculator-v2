@@ -44,4 +44,8 @@ justify-content: space-between;
 width: min(90%,770px);
 margin-inline: auto;
 padding-block: 1rem 2rem;
+background-color: green;
+@media screen and (max-width:400px) {
+  padding-block: 1rem;
+}
 `
