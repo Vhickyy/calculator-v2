@@ -28,7 +28,7 @@ const Wrapper = styled.main`
   display: grid;
   place-items: center;
   row-gap: 2rem;
-  padding-block: 2rem;
+  padding-block: 1rem 2rem;
   width: min(100%,1000px);
   margin-inline: auto;
   /* background-color: green; */
@@ -49,4 +49,7 @@ padding-block: 1rem;
   height: 2rem;
   color: black;
 }
+/* @media screen and (max-width:400px){
+  padding-block: 1rem .5rem;
+} */
 `
