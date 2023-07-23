@@ -3,12 +3,11 @@ import { useCalculator } from '../../context/CalculatorContext';
 
 const Button = ({ value}:{value:string}) => {
     const {inputVal} = useCalculator()
-    const handleInput = (e: any) =>{
-        // console.log(e.target.textContent);
-        inputVal(e.target.textContent);
+    const handleInput = (value: string) =>{
+        inputVal(value);
     }
   return (
-    <InputbtnStyle onClick={(e)=>handleInput(e)}>{value}</InputbtnStyle>
+    <InputbtnStyle onClick={()=>handleInput(value)}>{value}</InputbtnStyle>
   )
 }
 

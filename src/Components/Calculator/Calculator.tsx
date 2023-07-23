@@ -2,11 +2,10 @@ import { useCalculator } from '../../context/CalculatorContext';
 import styled from 'styled-components';
 import { OperationbtnStyle } from '../../styles/Buttonstyle';
 import Button from './Button';
-
 const Calculator = () => {
     const {currentValue,previousValue,operation,inputOperation,deleteInput,percent,evaluate,clearAll} = useCalculator();
-    const handleOperation = (e: any) =>{
-        inputOperation(e.target.textContent)
+    const handleOperation = (value:string) =>{
+        inputOperation(value)
     }
   return (
     <Wrapper>
@@ -18,29 +17,28 @@ const Calculator = () => {
             <div className='grid'>
                 <OperationbtnStyle  onClick={clearAll}>AC</OperationbtnStyle>
                 <OperationbtnStyle  onClick={deleteInput}>Del</OperationbtnStyle>
-                <OperationbtnStyle  onClick={(e:any) => percent(e.target.textContent) }>%</OperationbtnStyle>
-                <OperationbtnStyle  onClick={handleOperation}>÷</OperationbtnStyle>
+                <OperationbtnStyle  onClick={() => percent("%")}>%</OperationbtnStyle>
+                <OperationbtnStyle  onClick={()=>handleOperation("÷")}>÷</OperationbtnStyle>
             </div>
             <div className='grid'>
                 <Button value='7'/>
                 <Button value='8'/>
                 <Button value='9'/>
-                <OperationbtnStyle onClick={handleOperation}>×</OperationbtnStyle>
+                <OperationbtnStyle onClick={()=>handleOperation("×")}>×</OperationbtnStyle>
             </div>
             <div className='grid'>
                 <Button value='4'/>
                 <Button value='5'/>
                 <Button value='6'/>
-                <OperationbtnStyle onClick={handleOperation}>-</OperationbtnStyle>
+                <OperationbtnStyle onClick={()=>handleOperation("-")}>-</OperationbtnStyle>
             </div>
             <div className='grid'>
                 <Button value='1'/>
                 <Button value='2'/>
                 <Button value='3'/>
-                <OperationbtnStyle className='operation' onClick={handleOperation}>+</OperationbtnStyle>
+                <OperationbtnStyle className='operation' onClick={()=>handleOperation("+")}>+</OperationbtnStyle>
             </div>
             <div className='last-grid'>
-                {/* <OperationbtnStyle className='operation'>H</OperationbtnStyle> */}
                 <Button value='0'/>
                 <Button value='.'/>
                 <OperationbtnStyle className='operation last-btn' onClick={evaluate}>=</OperationbtnStyle>
@@ -49,17 +47,14 @@ const Calculator = () => {
     </Wrapper>
   )
 }
-
 export default Calculator;
 
 const Wrapper = styled.section`
     background-color: #dde1e7;
     width: 21rem;
     height: 34rem;
-    /* height: 84vh; */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     border-radius: 1rem;
     padding: 3rem 1rem 1rem 1rem;
     box-shadow: -7px -7px 7px #ffffff70, 7px 7px 5px rgba(94, 104, 121, .2);
@@ -68,11 +63,10 @@ const Wrapper = styled.section`
         padding: 1.2rem 0;
         border-radius: .3rem;
         height: 100%;
-        /* background-color: blue; */
         display: grid;
         align-content: end;
         text-align: end;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         font-weight: 600;
     }
     .button-section{
@@ -85,7 +79,6 @@ const Wrapper = styled.section`
         display: grid;
         grid-template-columns: repeat(4,1fr);
         column-gap: .7rem;
-        /* background-color: green; */
     }
     .last-grid{
         display: flex;
@@ -98,9 +91,8 @@ const Wrapper = styled.section`
         }
     }
     @media screen and (max-width:400px) {
-        //height: 35rem;
         .button-section{
-           row-gap: .7rem;
+           row-gap: .9rem;
         }
     }
 `

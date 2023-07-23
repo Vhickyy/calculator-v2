@@ -5,7 +5,7 @@ const History = () => {
   return (
     <Wrapper>
       <div className='text'>
-        {history.map((result,index)=>{
+        {history.map((result:string[],index)=>{
           return (
             <div key={index}>
               <p>{result.slice(0,-1).join(" ")}</p>
