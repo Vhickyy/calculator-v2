@@ -23,15 +23,13 @@ function App() {
 export default App;
 
 const Wrapper = styled.main`
-  /* min-height: 100vh; */
   background-color: #dde1e7;
   display: grid;
   place-items: center;
   row-gap: 2rem;
-  padding-block: 1rem 2rem;
+  padding-block: .5rem 2rem;
   width: min(100%,1000px);
   margin-inline: auto;
-  /* background-color: green; */
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-evenly;
@@ -49,7 +47,4 @@ padding-block: 1rem;
   height: 2rem;
   color: black;
 }
-/* @media screen and (max-width:400px){
-  padding-block: 1rem .5rem;
-} */
 `
