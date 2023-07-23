@@ -9,7 +9,7 @@ export const Buttonstyle = styled.button`
   outline: none;
   cursor: pointer;
   @media screen and (min-width:400px){
-    padding-block: 1.2rem;
+    //padding-block: 1.2rem;
   }
 `
 
