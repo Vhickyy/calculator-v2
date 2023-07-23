@@ -99,5 +99,8 @@ const Wrapper = styled.section`
     }
     @media screen and (max-width:400px) {
         height: 35rem;
+        .button-section{
+           row-gap: .5rem;
+        }
     }
 `
