@@ -9,7 +9,7 @@ function App() {
       <Header>
         <div>calc</div>
         <div>
-          <a href="#"><FaGithub/></a>
+          <a href="#" className='icons'><FaGithub/></a>
         </div>
       </Header>
       <Wrapper>
@@ -44,7 +44,11 @@ justify-content: space-between;
 width: min(90%,770px);
 margin-inline: auto;
 padding-block: 1rem 2rem;
-background-color: green;
+/* background-color: green; */
+.icons{
+  width: 2rem;
+  height: 2rem;
+}
 @media screen and (max-width:400px) {
   padding-block: 1rem;
 }
