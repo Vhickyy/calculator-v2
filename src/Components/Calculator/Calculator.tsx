@@ -72,8 +72,8 @@ const Wrapper = styled.section`
         display: grid;
         align-content: end;
         text-align: end;
-        font-size: 1.5rem;
-        font-weight: 600;
+        font-size: 1.2rem;
+        font-weight: 500;
     }
     .button-section{
         display: flex;
@@ -98,9 +98,9 @@ const Wrapper = styled.section`
         }
     }
     @media screen and (max-width:400px) {
-        height: 35rem;
+        //height: 35rem;
         .button-section{
-           row-gap: .5rem;
+           row-gap: .7rem;
         }
     }
 `
