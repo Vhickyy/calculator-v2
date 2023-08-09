@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import Calculator from './Components/Calculator/Calculator';
 import History from './Components/History';
-import {FaGithub} from "react-icons/fa"
+import {FaFacebook, FaGithub, FaLinkedin} from "react-icons/fa"
+import {BsFillSunFill,BsFillMoonFill } from "react-icons/bs"
 
 function App() {
   return (
@@ -9,7 +10,11 @@ function App() {
       <Header>
         <div>calc</div>
         <div>
-          <a href="#"><FaGithub className='icons'/></a>
+            <BsFillSunFill className='icons'/>
+            <BsFillMoonFill className='icons'/>
+            <a href="#"><FaGithub className='icons'/></a>
+            <a href="#"><FaFacebook className='icons'/></a>
+            <a href="#"><FaLinkedin className='icons'/></a>
         </div>
       </Header>
       <Wrapper>
