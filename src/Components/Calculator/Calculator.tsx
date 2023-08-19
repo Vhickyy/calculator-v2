@@ -9,6 +9,7 @@ const Calculator = () => {
     }
   return (
     <Wrapper>
+        <button className='scrollBtn'>H</button>
         <div className='output'>
             <div>{previousValue} {operation}</div>
             <div>{currentValue}</div>
@@ -58,6 +59,7 @@ const Wrapper = styled.section`
     border-radius: 1rem;
     padding: 3rem 1rem 1rem 1rem;
     box-shadow: -7px -7px 7px #ffffff70, 7px 7px 5px rgba(94, 104, 121, .2);
+    position: relative;
     .output{
         color: black;
         padding: 1.2rem 0;

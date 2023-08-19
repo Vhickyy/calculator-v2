@@ -7,7 +7,7 @@ export const initialState = {
     operation:'',
     newValue:true,
     getHistory:[],
-    history: JSON.parse(`${localStorage.getItem('history')}`) || []
+    history: JSON.parse(`${localStorage.getItem('history')}`) || [],
 }
 const initState = {
     ...initialState as InitialStateProp,
