@@ -13,11 +13,11 @@ export const Buttonstyle = styled.button`
 `
 
 export const InputbtnStyle = styled(Buttonstyle)`
-  background-color: #dde1e7;
-  color: rgb(58, 54, 54);
-  box-shadow: -3px -3px 7px #ffffff70, 3px 3px 5px rgba(94, 104, 121, .288);
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
+  box-shadow: var(--btnShadow);
   &:hover{
-    box-shadow: inset -3px -3px 7px #ffffff70, inset 3px 3px 5px rgba(94, 104, 121, .288);
+    box-shadow: var(--btnHoverShadow);
   }
 `
 export const OperationbtnStyle = styled(Buttonstyle)`

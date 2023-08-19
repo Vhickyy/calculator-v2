@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { useCalculator } from "../context/CalculatorContext"
+import { FaTrash } from "react-icons/fa"
 const History = () => {
   const {history, clearLocalStorage} = useCalculator()
   return (
@@ -23,9 +24,8 @@ const History = () => {
         })}
       </div>
       <div className='clear' onClick={clearLocalStorage}>
-        <button >Clear</button>
-      </div></>
-      }
+        <button > <FaTrash className="icon" /></button>
+      </div></>}
     </Wrapper>
   )
 }
@@ -33,11 +33,11 @@ const History = () => {
 export default History
 
 const Wrapper = styled.div`
-  background-color: #dde1e7;
+  background-color: var(--backgroundColor);
   width: 21rem;
   height: 34rem;
   border-radius: 1rem;
-  box-shadow: -7px -7px 7px #ffffff70, 7px 7px 5px rgba(94, 104, 121, .2);
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -66,6 +66,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     gap: .8rem;
     height: 25rem;
+    color: var(--textColor);
     /* background-color: green; */
   }
   .clear{
@@ -78,10 +79,17 @@ const Wrapper = styled.div`
     margin-top: 0;
     padding: .7rem 2.5rem;
     border-radius: .5rem;
-    box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, .288);
-    background-color: #dde1e7;
-    color: #4b4646;
+    box-shadow: var(--btnShadow);
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
     border: none;
+    cursor: pointer;
+    .icon {
+      width: 1.1rem;
+      height: 1.1rem;
+      color: var(--textColor);
+      cursor: pointer;
+    }
   }
   @media screen and (min-width: 768px)  {
     .text{

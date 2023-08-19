@@ -1,6 +1,20 @@
 :root{
   --backgroundColor: #dde1e7;
   --textColor: black;
+  --backgroundColor: #1d1d1d;
+  --textColor: whitesmoke;
+  /* --shadow: -6px -6px 7px #feffff,
+    6px 6px 5px #bcbfc4;
+  --btnShadow: -3px -3px 7px #feffff,
+    3px 3px 5px #bcbfc4;
+  --btnHoverShadow: inset -3px -3px 7px #feffff,
+    inset 3px 3px 5px #bcbfc4; */
+  --shadow: -6px -6px 7px #feffff10,
+    6px 6px 5px #111111;
+  --btnShadow: -3px -3px 7px #feffff10,
+    3px 3px 5px #111111;
+  --btnHoverShadow: inset -3px -3px 7px #feffff10,
+    inset 3px 3px 5px #111111;
 }
 *{
   margin: 0;
@@ -16,6 +30,7 @@ body{
 }
 header{
   display: flex;
+  color: var(--textColor);
   justify-content: space-between;
   width: min(90%, 1120px);
   margin-inline: auto;
@@ -26,13 +41,17 @@ main{
   display: grid;
   place-items: center;
   row-gap: 2rem;
-  padding-block: .5rem 2rem;
+  padding-block: 1rem 2rem;
   width: min(100%, 1000px);
   margin-inline: auto;
 }
+.icon-container{
+  display: flex;
+  gap: .7rem;
+}
 .icons {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   color: var(--textColor);
   cursor: pointer;
 }
@@ -45,15 +64,14 @@ main{
   border-radius: 50%;
   background-color: var(--backgroundColor);
   cursor: pointer;
-  color: rgb(58, 54, 54);
-  box-shadow: -3px -3px 7px #ffffff70, 3px 3px 5px rgba(94, 104, 121, .288);
+  color: var(--textColor);
+  box-shadow: var(--btnShadow);
   font-weight: 700;
   font-size: 1.1rem;  
 }
 .scrollBtn:hover {
-  box-shadow: inset -3px -3px 7px #ffffff70, inset 3px 3px 5px rgba(94, 104, 121, .288);
+  box-shadow: var(--btnHoverShadow);
 }
-
 @media screen and (min-width: 768px) {
   main{
     display: flex;

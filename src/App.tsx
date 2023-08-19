@@ -13,7 +13,8 @@ function App() {
     <>
       <header>
         <div>calc</div>
-        <div>
+        <p>Built by Okonnah Victoria 💙.</p>
+        <div className='icon-container'>
             {darkTheme ? <BsFillSunFill className='icons' onClick={toggleTheme}/> :
             <BsFillMoonFill className='icons' onClick={toggleTheme}/>}
             <a href="#"><FaGithub className='icons'/></a>

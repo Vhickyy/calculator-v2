@@ -51,17 +51,17 @@ const Calculator = () => {
 export default Calculator;
 
 const Wrapper = styled.section`
-    background-color: #dde1e7;
+    background-color: var(--backgroundColor);
     width: 21rem;
     height: 34rem;
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
     padding: 3rem 1rem 1rem 1rem;
-    box-shadow: -7px -7px 7px #ffffff70, 7px 7px 5px rgba(94, 104, 121, .2);
+    box-shadow: var(--shadow);
     position: relative;
     .output{
-        color: black;
+        color: var(--textColor);
         padding: 1.2rem 0;
         border-radius: .3rem;
         height: 100%;
@@ -70,6 +70,8 @@ const Wrapper = styled.section`
         text-align: end;
         font-size: 1.5rem;
         font-weight: 600;
+        letter-spacing: .2rem;
+        overflow-x: auto;
     }
     .button-section{
         display: flex;
