@@ -12,7 +12,6 @@ function App() {
   return (
     <>
       <header>
-        <div>calc</div>
         <p>Built by Okonnah Victoria 💙.</p>
         <div className='icon-container'>
             {darkTheme ? <BsFillSunFill className='icons' onClick={toggleTheme}/> :

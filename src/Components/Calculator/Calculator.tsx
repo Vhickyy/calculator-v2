@@ -11,7 +11,7 @@ const Calculator = () => {
     <Wrapper>
         <button className='scrollBtn'>H</button>
         <div className='output'>
-            <div>{previousValue} {operation}</div>
+            <div className='prev'>{previousValue} {operation}</div>
             <div>{currentValue}</div>
         </div>
         <div className='button-section'>
@@ -66,12 +66,17 @@ const Wrapper = styled.section`
         border-radius: .3rem;
         height: 100%;
         display: grid;
+        gap: .7rem;
         align-content: end;
         text-align: end;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         font-weight: 600;
         letter-spacing: .2rem;
         overflow-x: auto;
+    }
+    .prev{
+        font-size: 1.2rem;
+        font-weight: 600;
     }
     .button-section{
         display: flex;

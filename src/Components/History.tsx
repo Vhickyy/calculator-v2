@@ -10,7 +10,7 @@ const History = () => {
       </div>
       {history.length < 1 ? <>
       <div className="empty">
-       <h2>No History</h2>
+       <h3>No History</h3>
       </div>
       </> : <>
       <div className='text'>
@@ -42,19 +42,20 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   .scroll{
-    padding: .7rem 0;
+    padding: .5rem 0;
     border-bottom: 1px solid whitesmoke;
   }
   .scrollBtn{
     position: relative;
     top: 0;
-    padding: .8rem;
+    padding: .7rem;
     margin-left: 1rem;
   }
   .empty{
     height: 30rem;
     display: grid;
     place-items: center;
+    color: var(--textColor);
   }
   .text{
     padding: 1rem;
@@ -67,7 +68,6 @@ const Wrapper = styled.div`
     gap: .8rem;
     height: 25rem;
     color: var(--textColor);
-    /* background-color: green; */
   }
   .clear{
     padding: 1.2rem 0;
