@@ -4,7 +4,7 @@ import { initialState } from "./CalculatorContext";
 export const reducer = (state: InitialStateProp,action: InputValueOrOperation | Manipulateinput)=>{
     //Value Input
     if(action.type === "INPUT_VALUE"){
-        if(state.currentValue.length === 20){
+        if(state.currentValue.length === 17){
             return state
         }
         if(state.newValue && action.payload === '.'){

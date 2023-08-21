@@ -1,14 +1,24 @@
 :root{
   --backgroundColor: #dde1e7;
   --textColor: black;
-  --backgroundColor: #1d1d1d;
-  --textColor: whitesmoke;
-  /* --shadow: -6px -6px 7px #feffff,
+  /* --backgroundColor: #1d1d1d;
+  --textColor: whitesmoke; */
+  --shadow: -6px -6px 7px #feffff,
     6px 6px 5px #bcbfc4;
   --btnShadow: -3px -3px 7px #feffff,
     3px 3px 5px #bcbfc4;
   --btnHoverShadow: inset -3px -3px 7px #feffff,
-    inset 3px 3px 5px #bcbfc4; */
+    inset 3px 3px 5px #bcbfc4;
+  /* --shadow: -6px -6px 7px #feffff10,
+    6px 6px 5px #111111;
+  --btnShadow: -3px -3px 7px #feffff10,
+    3px 3px 5px #111111;
+  --btnHoverShadow: inset -3px -3px 7px #feffff10,
+    inset 3px 3px 5px #111111; */
+}
+.darkTheme{
+  --backgroundColor: #1d1d1d;
+  --textColor: whitesmoke;
   --shadow: -6px -6px 7px #feffff10,
     6px 6px 5px #111111;
   --btnShadow: -3px -3px 7px #feffff10,
@@ -20,10 +30,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-.darkTheme{
-  --backgroundColor: #1d1d1d;
-  --textColor: whitesmoke;
 }
 body{
   background-color: var(--backgroundColor);
