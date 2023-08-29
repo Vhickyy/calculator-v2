@@ -2,10 +2,16 @@ import styled from "styled-components"
 import { useCalculator } from "../context/CalculatorContext"
 import { FaTrash } from "react-icons/fa"
 const History = () => {
-  const {history, clearLocalStorage} = useCalculator()
+  const {history, clearLocalStorage} = useCalculator();
+  const scroll = () => {
+    window.scroll({
+      top: 0,
+      left: 0
+    })
+  }
   return (
     <Wrapper>
-      <div className="scroll">
+      <div className="scroll" onClick={scroll}>
        <button className='scrollBtn'>C</button>
       </div>
       {history.length < 1 ? <>

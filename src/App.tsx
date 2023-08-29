@@ -12,7 +12,6 @@ const getTheme = () => {
 function App() {
   const [darkTheme, setDarkTheme] = useState<boolean>(getTheme());
   const toggleTheme = () => {
-    // const newTheme = !darkTheme
     setDarkTheme(!darkTheme);
     document.body.classList.toggle("darktheme",!darkTheme);
     localStorage.setItem("darkTheme", JSON.stringify(!darkTheme))

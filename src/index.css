@@ -23,6 +23,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 body{
   background-color: var(--backgroundColor);
 }
@@ -30,6 +33,7 @@ header{
   display: flex;
   color: var(--textColor);
   justify-content: space-between;
+  align-items: center;
   width: min(90%, 1120px);
   margin-inline: auto;
   padding-block: 1.2rem;
@@ -81,5 +85,9 @@ main{
   }
   .scrollBtn{
     display: none;
+  }
+  .icons {
+    width: 1.7rem;
+    height: 1.7rem;
   }
 }

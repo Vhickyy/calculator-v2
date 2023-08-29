@@ -6,10 +6,16 @@ const Calculator = () => {
     const {currentValue,previousValue,operation,inputOperation,deleteInput,percent,evaluate,clearAll} = useCalculator();
     const handleOperation = (value:string) =>{
         inputOperation(value)
-    }
+    };
+    const scroll = () => {
+    window.scroll({
+      top: 600,
+      left: 0
+    })
+  }
   return (
     <Wrapper>
-        <button className='scrollBtn'>H</button>
+        <button className='scrollBtn' onClick={scroll}>H</button>
         <div className='output'>
             <div className='prev'>{previousValue} {operation}</div>
             <div>{currentValue}</div>

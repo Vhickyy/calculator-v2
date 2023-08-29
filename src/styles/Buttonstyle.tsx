@@ -21,6 +21,7 @@ export const InputbtnStyle = styled(Buttonstyle)`
   }
 `
 export const OperationbtnStyle = styled(Buttonstyle)`
+  /* background-color:  #52d6fc; */
   background-color:  #52d6fc;
   color: rgb(22, 122, 194);
   box-shadow: -3px -3px 7px #62ffff99,3px 3px 5px #42adcc;
