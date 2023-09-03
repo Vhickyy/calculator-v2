@@ -22,10 +22,11 @@ export const InputbtnStyle = styled(Buttonstyle)`
 `
 export const OperationbtnStyle = styled(Buttonstyle)`
   /* background-color:  #52d6fc; */
-  background-color:  #52d6fc;
-  color: rgb(22, 122, 194);
-  box-shadow: -3px -3px 7px #62ffff99,3px 3px 5px #42adcc;
+  background-color:  #396ae6;
+  /* color: rgb(22, 122, 194); */
+  color: #ffffff;
+  box-shadow: -3px -3px 3px #305ac4,3px 3px 3px #427aff;
   &:hover{
-    box-shadow: inset -3px -3px 7px #62ffff, inset 3px 3px 5px #42adcc;
+    box-shadow: inset -3px -3px 7px #427aff, inset 3px 3px 5px #305ac4;
   }
 `
