@@ -1,6 +1,6 @@
 import Calculator from './Components/Calculator/Calculator';
 import History from './Components/History';
-import {FaFacebook, FaGithub, FaLinkedin} from "react-icons/fa"
+import { FaGithub, FaLinkedin} from "react-icons/fa"
 import {BsFillSunFill,BsFillMoonFill } from "react-icons/bs"
 import { useState } from 'react';
 
@@ -23,9 +23,8 @@ function App() {
         <div className='icon-container'>
             {darkTheme ? <BsFillSunFill className='icons' onClick={toggleTheme}/> :
             <BsFillMoonFill className='icons' onClick={toggleTheme}/>}
-            <a href="#"><FaGithub className='icons'/></a>
-            <a href="#"><FaFacebook className='icons'/></a>
-            <a href="#"><FaLinkedin className='icons'/></a>
+            <a href="https://github.com/Vhickyy" target='_blank' rel="noreferrer"><FaGithub className='icons'/></a>
+            <a href="https://www.linkedin.com/in/victoria-okonnah-562338247" target='_blank' rel="noreferrer"><FaLinkedin className='icons'/></a>
         </div>
       </header>
       <main>
