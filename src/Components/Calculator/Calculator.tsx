@@ -8,7 +8,7 @@ const Calculator = () => {
         inputOperation(value)
     };
     const scroll = () => {
-    window.scroll({
+    window.scrollTo({
       top: 600,
       left: 0,
       behavior: "smooth"
