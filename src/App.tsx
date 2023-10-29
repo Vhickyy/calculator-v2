@@ -29,7 +29,7 @@ function App() {
       </header>
       <main>
           <Calculator/>
-        fghbfhjbvvgfcghjjhvfghhhhvvhhhhgjjjhhhhhhhhhhhhhhhhhhhhhhfghbfhjbvvgfcghjjhvfghhhhvvhhhhgjjjhhhhhhhhhhhhhhhhhhhhhhfghbfhjbvvgfcghjjhvfghhhhvvhhhhgjjjhhhhhhhhhhhhhhhhhhhhhhfghbfhjbvvgfcghjjhvfghhhhvvhhhhgjjjhhhhhhhhhhhhhhhhhhhhhhfghbfhjbvvgfcghjjhvfghhhhvvhhhhgjjjhhhhhhhhhhhhhhhhhhhhhhfghbfhjbvvgfcghjjhvfghhhhvvhhhhgjjjhhhhhhhhhhhhhhhhhhhhhhfghbfhjbvvgfcghjjhvfghhhhvvhhhhgjjjhhhhhhhhhhhhhhhhhhhhhhfghbfhjbvvgfcghjjhvfghhhhvvhhhhgjjjhhhhhhhhhhhhhhhhhhhhhhfghbfhjbvvgfcghjjhvfghhhhvvhhhhgjjjhhhhhhhhhhhhhhhhhhhhhhfghbfhjbvvgfcghjjhvfghhhhvvhhhhgjjjhhhhhhhhhhhhhhhhhhhhhhfghbfhjbvvgfcghjjhvfghhhhvvhhhhgjjjhhhhhhhhhhhhhhhhhhhhhhfghbfhjbvvgfcghjjhvfghhhhvvhhhhgjjjhhhhhhhhhhhhhhhhhhhhhhfghbfhjbvvgfcghjjhvfghhhhvvhhhhgjjjhhhhhhhhhhhhhhhhhhhhhh
+        
           <History/>
       </main>
     </>
