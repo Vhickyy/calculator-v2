@@ -9,7 +9,7 @@ const Calculator = () => {
     };
     const scroll = () => {
     window.scroll({
-      top: 600,
+      top: 1200,
       left: 0
     })
   }

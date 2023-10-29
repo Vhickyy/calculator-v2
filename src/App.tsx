@@ -23,7 +23,7 @@ function App() {
         <div className='icon-container'>
             {darkTheme ? <BsFillSunFill className='icons' onClick={toggleTheme}/> :
             <BsFillMoonFill className='icons' onClick={toggleTheme}/>}
-            <a href="https://github.com/Vhickyy" target='_blank' rel="noreferrer"><FaGithub className='icons'/></a>
+            <a href="#" target='_blank' rel="noreferrer"><FaGithub className='icons'/></a>
             <a href="https://www.linkedin.com/in/victoria-okonnah-562338247" target='_blank' rel="noreferrer"><FaLinkedin className='icons'/></a>
         </div>
       </header>
